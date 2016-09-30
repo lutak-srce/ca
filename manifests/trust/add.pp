@@ -14,7 +14,6 @@ define ca::trust::add (
     group   => root,
     mode    => '0644',
     source  => $source,
-    require => Exec['enable_ca_trust'],
     notify  => Exec['update_ca_trust'],
   }
 
